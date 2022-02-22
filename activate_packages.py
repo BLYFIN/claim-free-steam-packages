@@ -95,7 +95,7 @@ async def activatePackages(asf, tries):
 		
 		for app in tqdm(apps, desc=f'{tries} attempt: Activating licenses'):
 
-			cmd = "!addlicense app/" + app
+			cmd = "!addlicense asf app/" + app
 
 			resp = await asf.Api.Command.post(body={'Command': cmd})
 
